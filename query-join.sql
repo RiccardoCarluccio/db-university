@@ -1,5 +1,5 @@
 /* Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia */
-SELECT `students`.`name`, `students`.`surname`, `degrees`.`name` AS "Corso di Laurea"
+SELECT `students`.`name` AS `Nome`, `students`.`surname` AS `Cognome`, `degrees`.`name` AS "Corso di Laurea"
 FROM `students`
 INNER JOIN `degrees`
 ON `students`.`degree_id` = `degrees`.`id`
