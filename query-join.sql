@@ -12,3 +12,12 @@ INNER JOIN `departments`
 ON `degrees`.`department_id` = `departments`.`id`
 WHERE `degrees`.`level` = "magistrale"
 AND `departments`.`id` = 7;
+
+/* Selezionare tutti i corsi in cui insegna Fulvio Amato (id = 44) */
+SELECT `teachers`.`name` AS `Nome Professore`, `teachers`.`surname` AS `Cognome Professore`, `courses`.`name` AS `Nome Corso`
+FROM `course_teacher`
+INNER JOIN `courses`
+ON `courses`.`id` = `course_teacher`.`teacher_id`
+INNER JOIN `teachers`
+ON `teachers`.`id` = `course_teacher`.`course_id`
+WHERE `teachers`.`id` = 44;
