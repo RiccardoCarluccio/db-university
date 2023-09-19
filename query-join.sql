@@ -42,3 +42,5 @@ ON `teachers`.`id` = `course_teacher`.`teacher_id`
 INNER JOIN `course_teacher`
 ON `course_teacher`.`course_id` = `courses`.`id`
 /* non funziona */
+
+/* 6) Selezionare tutti i docenti che insegnano nel DIpartimento di Matematica */
